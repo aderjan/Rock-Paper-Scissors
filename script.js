@@ -13,7 +13,7 @@ pickRock.addEventListener('click', function() { playerPick('rock') });
 pickPaper.addEventListener('click', function() { playerPick('paper') });
 pickScissors.addEventListener('click', function() { playerPick('scissors') });
 
-var gameState = 'ended'; //'started'; 'ended';
+var gameState = 'notStarted'; //'started'; 'ended';
     player = {
         name: '',
         score: 0
@@ -110,9 +110,6 @@ function playerPick(playerPick) {
     
     checkRoundWinner(playerPick, computerPick);
 }
-
-var playerPointsElem = 0,
-	computerPointsElem = 0;
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
